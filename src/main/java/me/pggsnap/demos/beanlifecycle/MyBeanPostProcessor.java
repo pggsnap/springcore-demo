@@ -1,7 +1,9 @@
 package me.pggsnap.demos.beanlifecycle;
 
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.context.MessageSource;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -27,4 +29,7 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
         }
         return bean;
     }
+
+    @Autowired
+    private MessageSource messageSource;
 }

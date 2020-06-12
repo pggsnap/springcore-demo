@@ -2,6 +2,7 @@ package me.pggsnap.demos.validation;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
@@ -24,7 +25,7 @@ public class Person {
     @BigDecimalValid(precision = 10, scale = 2)
     private BigDecimal asset;
 
-    @BigDecimalValid(precision = 3, scale = 2)
+    @Digits(integer = 4, fraction = 2)
     private BigDecimal cash;
 
     public String getName() {

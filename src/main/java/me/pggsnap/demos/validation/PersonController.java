@@ -45,7 +45,7 @@ public class PersonController {
      * @return
      *
      * eg:
-     *  curl -L -X POST 'http://127.0.0.1:8080/springcore/validation/person/update' -H 'Content-Type: application/json' -d '{ "birth": "2020-05-22", "email": "pggsnap", "asset": 1000.2411, "cash": "1200.11" }'
+     *  curl -L -X POST 'http://127.0.0.1:8080/springcore/validation/person/update' -H 'Content-Type: application/json' -d '{ "birth": "2020-05-22", "email": "pggsnap", "asset": 1000.2411, "cash": "1200.112" }'
      */
     @PostMapping("/update")
     public String update(@RequestBody @Validated Person person) {
